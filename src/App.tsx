@@ -3,6 +3,7 @@ import { useAppSelector, useAppDispatch } from './store/hooks'
 import logo from './logo.svg'
 import { increment } from './store/actions/counterActions'
 import { selectCount } from './store/selectors/counterSelectors'
+import { Button } from 'react-bootstrap'
 import './App.scss'
 
 function App(): JSX.Element {
@@ -42,6 +43,9 @@ function App(): JSX.Element {
 					</a>
 				</p>
 			</header>
+			<div>
+				<Button variant="primary">Primary</Button>{' '}
+			</div>
 		</div>
 	)
 }
