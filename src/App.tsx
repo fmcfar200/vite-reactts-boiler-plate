@@ -1,9 +1,9 @@
 import React from 'react'
 import { useAppSelector, useAppDispatch } from './store/hooks'
 import logo from './logo.svg'
-import './App.css'
 import { increment } from './store/actions/counterActions'
 import { selectCount } from './store/selectors/counterSelectors'
+import './App.scss'
 
 function App(): JSX.Element {
 	const count = useAppSelector(selectCount)

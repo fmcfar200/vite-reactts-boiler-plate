@@ -10,7 +10,8 @@
     "@reduxjs/toolkit": "^1.6.1",
     "react": "^17.0.0",
     "react-dom": "^17.0.0",
-    "react-redux": "^7.2.5"
+    "react-redux": "^7.2.5",
+    "sass": "^1.42.1"
   },
   "devDependencies": {
     "@types/react": "^17.0.0",
