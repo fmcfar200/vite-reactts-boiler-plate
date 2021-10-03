@@ -1,10 +1,14 @@
 import { useState } from 'react'
 import React from 'react'
+import { useAppSelector, useAppDispatch } from './store/hooks'
 import logo from './logo.svg'
 import './App.css'
 
 function App(): JSX.Element {
-	const [count, setCount] = useState(0)
+	const count = useAppSelector(
+		(state: { counter: { value: any } }) => state.counter.value
+	)
+	const dispatch = useAppDispatch()
 
 	return (
 		<div className="App">
