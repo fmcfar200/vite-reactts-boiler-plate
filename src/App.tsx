@@ -1,51 +1,23 @@
 import React from 'react'
-import { useAppSelector, useAppDispatch } from './store/hooks'
-import logo from './logo.svg'
-import { increment } from './store/actions/counterActions'
-import { selectCount } from './store/selectors/counterSelectors'
-import { Button } from 'react-bootstrap'
+import { Route, Switch } from 'react-router-dom'
+import NavigationBar from './components/shared/navbar'
+import routes from './routes'
 import './App.scss'
 
 function App(): JSX.Element {
-	const count = useAppSelector(selectCount)
-	const dispatch = useAppDispatch()
-
 	return (
 		<div className="App">
-			<header className="App-header">
-				<img src={logo} className="App-logo" alt="logo" />
-				<p>Hello Vite + React!</p>
-				<p>
-					<button type="button" onClick={() => dispatch(increment())}>
-						count is: {count}
-					</button>
-				</p>
-				<p>
-					Edit <code>App.tsx</code> and save to test HMR updates.
-				</p>
-				<p>
-					<a
-						className="App-link"
-						href="https://reactjs.org"
-						target="_blank"
-						rel="noopener noreferrer"
-					>
-						Learn React
-					</a>
-					{' | '}
-					<a
-						className="App-link"
-						href="https://vitejs.dev/guide/features.html"
-						target="_blank"
-						rel="noopener noreferrer"
-					>
-						Vite Docs
-					</a>
-				</p>
-			</header>
-			<div>
-				<Button variant="primary">Primary</Button>{' '}
-			</div>
+			<NavigationBar />
+			<Switch>
+				{routes.map((route, i) => (
+					<Route
+						key={i}
+						exact={route.path === '/'}
+						path={route.path}
+						component={route.component}
+					/>
+				))}
+			</Switch>
 		</div>
 	)
 }
