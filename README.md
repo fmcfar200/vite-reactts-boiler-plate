@@ -20,7 +20,7 @@
 <br />
 <br />
 
-Boilerplate Vite, React, TS, Redux (React-Router-DOM & React-Bootstrap) application
+Boilerplate Vite, React, TS, Redux (Es-Lint, Prettier, React-Router-DOM & React-Bootstrap) application
 
 ## Requirements
  - Vite requires Node.js version >=12.0.0.
