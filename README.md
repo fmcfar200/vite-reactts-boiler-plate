@@ -26,7 +26,16 @@ Boilerplate Vite, React, TS, Redux (React-Router-DOM & React-Bootstrap) applicat
  - Vite requires Node.js version >=12.0.0.
  - NPM
 
+## Degit
+You can copy me using <a href="https://github.com/Rich-Harris/degit" target="_blank" rel="noopener noreferrer">Degit</a>
+```console
+npx degit fmcfar200/vite-reactts-boiler-plate my-project
+cd my-project
+
+npm install
+npm run dev
+```
+
 ## Setup
-  1. Pull down the repo
-  2. run `npm install`
-  3. run `npm run vite`
+  1. run `npm install`
+  2. run `npm run dev`
